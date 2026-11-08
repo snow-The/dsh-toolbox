@@ -1,0 +1,52 @@
+{
+  "name": "@snow-the/dsh-toolbox",
+  "version": "0.1.0",
+  "description": "One settings surface for our DSH tool plugins: memory, busyloop and session-handoff share a single panel with config forms and data export. No viewers — these plugins do not need a browsing GUI.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "settings",
+    "config-forms"
+  ],
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "package.json",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    },
+    "compatibility": {
+      "dshReleases": [
+        "0.2.1-rc.5"
+      ],
+      "verifiedAgainst": "0.2.2-rc.1"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.1-rc.5"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.5"
+  }
+}

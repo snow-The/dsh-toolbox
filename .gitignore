@@ -1,0 +1,8 @@
+node_modules/
+*.db
+*.db-wal
+*.db-shm
+.dsh-handoff/
+*.log
+*.bak-*
+*.tmp

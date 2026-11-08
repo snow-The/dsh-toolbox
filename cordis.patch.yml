@@ -1,0 +1,7 @@
+# @snow-the/dsh-toolbox — 我們工具插件的共用設置面。
+#
+# 只是一個 Loader 行：宿主半側刻意留空（沒有服務、沒有工具），存在的理由是讓
+# client 模組系統把瀏覽器半側送進頁面（見 docs/cookbook/adding-a-settings-card §5）。
+- insert:
+    - id: dsh-toolbox
+      name: '@snow-the/dsh-toolbox'
